@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="headers">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="header" minOccurs="1" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="header">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="shortdesc" type="xs:string" minOccurs="0" />
+                <xs:element name="link" type="xs:anyURI" minOccurs="0" />
+                <xs:element name="example" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+            <xs:attribute name="name" type="xs:string" use="required" />
+            <xs:attribute name="obsolete" type="xs:boolean" />
+            <xs:attribute name="rfc" type="xs:string" />
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
